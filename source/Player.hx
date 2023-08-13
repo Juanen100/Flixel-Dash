@@ -17,7 +17,7 @@ class Player extends FlxSprite
 
 		playerState = 0;
 
-		color = FlxColor.WHITE;
+		// color = FlxColor.WHITE;
 
 		acceleration.y = GRAVITY * 2.2;
 	}
@@ -29,7 +29,7 @@ class Player extends FlxSprite
 		switch (playerState)
 		{
 			case 0: // Cube
-				loadGraphic(Paths.image("cube"));
+				loadGraphic(Paths.image("modes/cube"));
 				updateHitbox();
 				acceleration.y = GRAVITY * 2.2;
 				if (FlxG.keys.pressed.SPACE && isTouching(FLOOR) || FlxG.mouse.pressed && isTouching(FLOOR))
@@ -46,7 +46,7 @@ class Player extends FlxSprite
 					angle = 0;
 				}
 			case 1: // Inverse Cube
-				loadGraphic(Paths.image("cube"));
+				loadGraphic(Paths.image("modes/cube"));
 				updateHitbox();
 				acceleration.y = GRAVITY * -2.2;
 				if (FlxG.keys.pressed.SPACE && isTouching(CEILING) || FlxG.mouse.pressed && isTouching(CEILING))
@@ -63,7 +63,7 @@ class Player extends FlxSprite
 					angle = 0;
 				}
 			case 2: // Ship
-				loadGraphic(Paths.image("ship"));
+				loadGraphic(Paths.image("modes/ship"));
 				updateHitbox();
 				acceleration.y = 0;
 				if (FlxG.keys.pressed.SPACE || FlxG.mouse.pressed)
@@ -75,7 +75,7 @@ class Player extends FlxSprite
 					acceleration.y += GRAVITY;
 				}
 			case 3: // Wave
-				loadGraphic(Paths.image("wave"));
+				loadGraphic(Paths.image("modes/wave"));
 				updateHitbox();
 				acceleration.y = 0;
 				if (FlxG.keys.pressed.SPACE || FlxG.mouse.pressed)
@@ -100,6 +100,19 @@ class Player extends FlxSprite
 				{
 					angle = 0;
 				}
+			case 4: // Ball
+				loadGraphic(Paths.image("modes/cube")); // I don't have ball yet so yeah
+				updateHitbox();
+				acceleration.y = 0;
+				if (FlxG.keys.pressed.SPACE && isTouching(FLOOR) || FlxG.mouse.pressed && isTouching(FLOOR))
+				{
+					velocity.y = GRAVITY;
+				}
+				else if (FlxG.keys.pressed.SPACE && isTouching(CEILING) || FlxG.mouse.pressed && isTouching(CEILING))
+				{
+					velocity.y = -GRAVITY;
+				}
+				angle += 3.25;
 		}
 
 		super.update(elapsed);

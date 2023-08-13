@@ -9911,6 +9911,21 @@
   <file name="src/Reflect.cpp" >
    <depend name="include/Reflect.h"/>
   </file>
+  <file name="src/Portals.cpp" >
+   <depend name="include/NewFlxState.h"/>
+   <depend name="include/PlayState.h"/>
+   <depend name="include/Player.h"/>
+   <depend name="include/Portals.h"/>
+   <depend name="include/flixel/FlxBasic.h"/>
+   <depend name="include/flixel/FlxCamera.h"/>
+   <depend name="include/flixel/FlxObject.h"/>
+   <depend name="include/flixel/FlxSprite.h"/>
+   <depend name="include/flixel/FlxState.h"/>
+   <depend name="include/flixel/group/FlxTypedGroup.h"/>
+   <depend name="include/flixel/math/FlxBasePoint.h"/>
+   <depend name="include/flixel/util/IFlxDestroyable.h"/>
+   <depend name="include/flixel/util/IFlxPooled.h"/>
+  </file>
   <file name="src/Player.cpp" >
    <depend name="include/Paths.h"/>
    <depend name="include/Player.h"/>
@@ -10048,6 +10063,7 @@
    <depend name="include/NewFlxState.h"/>
    <depend name="include/PlayState.h"/>
    <depend name="include/Player.h"/>
+   <depend name="include/Portals.h"/>
    <depend name="include/flixel/FlxBasic.h"/>
    <depend name="include/flixel/FlxG.h"/>
    <depend name="include/flixel/FlxObject.h"/>
