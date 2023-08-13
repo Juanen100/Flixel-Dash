@@ -9911,6 +9911,16 @@
   <file name="src/Std.cpp" >
    <depend name="include/Std.h"/>
   </file>
+  <file name="src/Spike.cpp" >
+   <depend name="include/Paths.h"/>
+   <depend name="include/Spike.h"/>
+   <depend name="include/flixel/FlxBasic.h"/>
+   <depend name="include/flixel/FlxObject.h"/>
+   <depend name="include/flixel/FlxSprite.h"/>
+   <depend name="include/flixel/math/FlxBasePoint.h"/>
+   <depend name="include/flixel/util/IFlxDestroyable.h"/>
+   <depend name="include/flixel/util/IFlxPooled.h"/>
+  </file>
   <file name="src/Reflect.cpp" >
    <depend name="include/Reflect.h"/>
   </file>
@@ -9957,8 +9967,10 @@
    <depend name="include/PlayState.h"/>
    <depend name="include/Player.h"/>
    <depend name="include/Portals.h"/>
+   <depend name="include/Spike.h"/>
    <depend name="include/flixel/FlxBasic.h"/>
    <depend name="include/flixel/FlxG.h"/>
+   <depend name="include/flixel/FlxGame.h"/>
    <depend name="include/flixel/FlxObject.h"/>
    <depend name="include/flixel/FlxSprite.h"/>
    <depend name="include/flixel/FlxState.h"/>
@@ -9967,6 +9979,13 @@
    <depend name="include/flixel/math/FlxRect.h"/>
    <depend name="include/flixel/util/IFlxDestroyable.h"/>
    <depend name="include/flixel/util/IFlxPooled.h"/>
+   <depend name="include/openfl/display/DisplayObject.h"/>
+   <depend name="include/openfl/display/DisplayObjectContainer.h"/>
+   <depend name="include/openfl/display/IBitmapDrawable.h"/>
+   <depend name="include/openfl/display/InteractiveObject.h"/>
+   <depend name="include/openfl/display/Sprite.h"/>
+   <depend name="include/openfl/events/EventDispatcher.h"/>
+   <depend name="include/openfl/events/IEventDispatcher.h"/>
   </file>
   <file name="src/Paths.cpp" >
    <depend name="include/Paths.h"/>
@@ -10204,6 +10223,7 @@
   </file>
   <file name="src/BG.cpp" >
    <depend name="include/BG.h"/>
+   <depend name="include/Player.h"/>
    <depend name="include/flixel/FlxBasic.h"/>
    <depend name="include/flixel/FlxG.h"/>
    <depend name="include/flixel/FlxObject.h"/>
@@ -11114,6 +11134,8 @@
    <depend name="include/flixel/math/FlxBasePoint.h"/>
    <depend name="include/Xml.h"/>
    <depend name="include/haxe/SysTools.h"/>
+   <depend name="include/Spike.h"/>
+   <depend name="include/Portals.h"/>
    <depend name="include/Player.h"/>
    <depend name="include/Paths.h"/>
    <depend name="include/openfl/text/Font.h"/>

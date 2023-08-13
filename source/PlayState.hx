@@ -12,11 +12,13 @@ class PlayState extends NewFlxState
 	var ceiling:FlxSprite;
 
 	var portal:Portals;
+	var spike:Spike;
 
 	public static var player:Player;
 
 	override public function create()
 	{
+		Player.isDead = false;
 		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);
 
 		bg = new BG(0, 0, Paths.image("bgs/game_bg_01_001-hd"), 0x287dff, X, 0, 0, false);
@@ -38,9 +40,12 @@ class PlayState extends NewFlxState
 		player = new Player(0, 495.788);
 		add(player);
 
-		portal = new Portals(1920, 455, FlxColor.RED);
+		portal = new Portals(1920, 445, FlxColor.RED);
 		portal.portalType = 3;
-		add(portal);
+		// add(portal);
+
+		spike = new Spike(2120, 492, "spike_01");
+		add(spike);
 
 		super.create();
 	}
@@ -49,6 +54,13 @@ class PlayState extends NewFlxState
 	{
 		collide(player, groundHit);
 		collide(player, ceiling);
+
+		if (FlxG.overlap(player, spike) && !Player.isDead)
+		{
+			Player.isDead = true;
+			wait(0.5);
+			FlxG.switchState(new PlayState());
+		}
 
 		super.update(elapsed);
 	}

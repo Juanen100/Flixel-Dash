@@ -13,6 +13,8 @@ class Player extends FlxSprite
 
 	var inverted:Bool = false;
 
+	public static var isDead:Bool = false;
+
 	public function new(x:Float = 0, y:Float = 0)
 	{
 		super(x, y);

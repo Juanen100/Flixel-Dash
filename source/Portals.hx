@@ -6,7 +6,7 @@ import flixel.util.FlxColor;
 
 class Portals extends FlxSprite
 {
-	final SPEED = -300;
+	public static var SPEED:Int = -350;
 
 	public var portalType:Int;
 

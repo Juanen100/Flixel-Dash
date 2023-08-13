@@ -17,10 +17,12 @@ class BG extends FlxBackdrop // Is it bad to use same class for both ground and 
 
 		color = colour;
 		scrollFactor.set();
-		if (ground)
-			velocity.set(-250, 0);
-		else
+		if (ground && !Player.isDead)
+			velocity.set(-350, 0);
+		else if (!Player.isDead)
 			velocity.set(-150, 0);
+		else
+			velocity.set(0, 0);
 		scale.set(1.35, 1.35);
 		updateHitbox();
 		if (!ground)
