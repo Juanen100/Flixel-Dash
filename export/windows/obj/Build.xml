@@ -9983,6 +9983,8 @@
    <depend name="include/flixel/input/keyboard/FlxKeyList.h"/>
    <depend name="include/flixel/input/keyboard/FlxKeyboard.h"/>
    <depend name="include/flixel/math/FlxRect.h"/>
+   <depend name="include/flixel/system/FlxSoundGroup.h"/>
+   <depend name="include/flixel/system/frontEnds/SoundFrontEnd.h"/>
    <depend name="include/flixel/util/IFlxDestroyable.h"/>
    <depend name="include/flixel/util/IFlxPooled.h"/>
    <depend name="include/openfl/display/DisplayObject.h"/>
@@ -10173,6 +10175,8 @@
    <depend name="include/flixel/input/mouse/FlxMouse.h"/>
    <depend name="include/flixel/input/mouse/FlxMouseButton.h"/>
    <depend name="include/flixel/math/FlxBasePoint.h"/>
+   <depend name="include/flixel/system/FlxSoundGroup.h"/>
+   <depend name="include/flixel/system/frontEnds/SoundFrontEnd.h"/>
    <depend name="include/flixel/util/IFlxDestroyable.h"/>
    <depend name="include/flixel/util/IFlxPooled.h"/>
    <depend name="include/openfl/display/DisplayObject.h"/>

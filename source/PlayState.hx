@@ -14,11 +14,14 @@ class PlayState extends NewFlxState
 	var portal:Portals;
 	var spike:Spike;
 
+	public static var songToPlay:String;
+
 	public static var player:Player;
 
 	override public function create()
 	{
 		Player.isDead = false;
+		FlxG.sound.playMusic(Paths.music(songToPlay));
 		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);
 
 		bg = new BG(0, 0, Paths.image("bgs/game_bg_01_001-hd"), 0x287dff, X, 0, 0, false);

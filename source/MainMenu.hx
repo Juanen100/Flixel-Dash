@@ -17,13 +17,14 @@ class MainMenu extends NewFlxState
 
 	override function create()
 	{
+		FlxG.sound.playMusic(Paths.music("menuLoop"));
 		bg = new BG(0, 0, Paths.image("bgs/game_bg_01_001-hd"), 0x287dff, X, 0, 0, false);
 		add(bg);
 
 		ground = new BG(0, 550, Paths.image("blocks/groundSquare_01_001-hd"), 0x0066ff, X, 0, 0, true);
 		add(ground);
 
-		logo = new FlxSprite(245, 75).loadGraphic(Paths.image("menu/logo"));
+		logo = new FlxSprite(260, 75).loadGraphic(Paths.image("menu/logo"));
 		logo.scale.set(0.75, 0.75);
 		logo.updateHitbox();
 		add(logo);
@@ -51,7 +52,8 @@ class MainMenu extends NewFlxState
 			{
 				play.scale.set(1.2, 1.2);
 
-				FlxG.switchState(new PlayState()); // TODO: redirect this so different levels can load like Stereo Madness, Back on Track, etc...
+				PlayState.songToPlay = "StereoMadness";
+				FlxG.switchState(new PlayState()); // TODO: make it load a diff level every time :)
 			}
 			else
 			{
@@ -86,6 +88,8 @@ class MainMenu extends NewFlxState
 				icons.scale.set(1, 1);
 			}
 		}
+
+		addWatch(logo, 'x');
 		super.update(elapsed);
 	}
 }
