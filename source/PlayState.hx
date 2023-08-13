@@ -62,6 +62,11 @@ class PlayState extends NewFlxState
 			FlxG.switchState(new PlayState());
 		}
 
+		if (FlxG.keys.justPressed.ESCAPE)
+		{
+			FlxG.switchState(new MainMenu());
+		}
+
 		super.update(elapsed);
 	}
 }
