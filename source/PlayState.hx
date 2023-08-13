@@ -19,10 +19,10 @@ class PlayState extends NewFlxState
 	{
 		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);
 
-		bg = new BG(0, 0, Paths.image("bgs/game_bg_01_001-hd"), FlxColor.BLUE, X, 0, 0, false);
+		bg = new BG(0, 0, Paths.image("bgs/game_bg_01_001-hd"), 0x287dff, X, 0, 0, false);
 		add(bg);
 
-		ground = new BG(0, 550, Paths.image("blocks/groundSquare_01_001-hd"), 0x0095FF, X, 0, 0, true);
+		ground = new BG(0, 550, Paths.image("blocks/groundSquare_01_001-hd"), 0x0066ff, X, 0, 0, true);
 		add(ground);
 
 		groundHit = new FlxSprite(0, 550).makeGraphic(1920, 120, FlxColor.BLUE);
@@ -50,7 +50,6 @@ class PlayState extends NewFlxState
 		collide(player, groundHit);
 		collide(player, ceiling);
 
-		addWatch(player, 'y');
 		super.update(elapsed);
 	}
 }

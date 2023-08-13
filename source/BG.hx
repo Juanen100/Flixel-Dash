@@ -5,7 +5,7 @@ import flixel.system.FlxAssets.FlxGraphicAsset;
 import flixel.util.FlxAxes;
 import flixel.util.FlxColor;
 
-class BG extends FlxBackdrop
+class BG extends FlxBackdrop // Is it bad to use same class for both ground and bg? maybe but its ok
 {
 	public var repeaterAxes:FlxAxes = XY;
 
@@ -17,7 +17,10 @@ class BG extends FlxBackdrop
 
 		color = colour;
 		scrollFactor.set();
-		velocity.set(-250, 0);
+		if (ground)
+			velocity.set(-250, 0);
+		else
+			velocity.set(-150, 0);
 		scale.set(1.35, 1.35);
 		updateHitbox();
 		if (!ground)
