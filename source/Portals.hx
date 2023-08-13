@@ -10,10 +10,10 @@ class Portals extends FlxSprite
 
 	public var portalType:Int;
 
-	public function new(x:Float = 0, y:Float = 0)
+	public function new(x:Float = 0, y:Float = 0, color:FlxColor)
 	{
 		super(x, y);
-		makeGraphic(64, 104, FlxColor.RED);
+		makeGraphic(64, 104, color);
 
 		// velocity.x -= SPEED;
 	}
@@ -23,7 +23,7 @@ class Portals extends FlxSprite
 		super.update(elapsed);
 
 		velocity.x = SPEED;
-		if (overlaps(PlayState.player))
+		if (overlaps(PlayState.player) && portalType > 0)
 		{
 			Player.playerState = portalType;
 		}

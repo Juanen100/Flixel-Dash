@@ -17,12 +17,14 @@ class Player extends FlxSprite
 	{
 		super(x, y);
 
+		scale.set(0.85, 0.85);
+
 		playerState = 0;
 
 		// TODO: Implement custom colors (and icons maybe)
 		// color = FlxColor.WHITE;
 
-		acceleration.y = GRAVITY * 2.2;
+		acceleration.y = GRAVITY * 2.5;
 	}
 
 	override function update(elapsed:Float)
@@ -119,7 +121,24 @@ class Player extends FlxSprite
 					if (isTouching(FLOOR))
 						inverted = false;
 				}
-				angle += 3.25;
+				angle += 6.75;
+			default:
+				loadGraphic(Paths.image("modes/cube"));
+				updateHitbox();
+				acceleration.y = GRAVITY * 2.2;
+				if (FlxG.keys.pressed.SPACE && isTouching(FLOOR) || FlxG.mouse.pressed && isTouching(FLOOR))
+				{
+					velocity.y -= GRAVITY;
+				}
+
+				if (!isTouching(FLOOR))
+				{
+					angle += 3.25;
+				}
+				else
+				{
+					angle = 0;
+				}
 		}
 
 		super.update(elapsed);
