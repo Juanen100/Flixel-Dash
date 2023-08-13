@@ -35,7 +35,7 @@ class ApplicationMain
 		ManifestResources.init(config);
 		#end
 
-		app.meta["build"] = "150";
+		app.meta["build"] = "202";
 		app.meta["company"] = "Juanen100";
 		app.meta["file"] = "Flixel Dash";
 		app.meta["name"] = "Flixel Dash";
@@ -52,7 +52,7 @@ class ApplicationMain
 			borderless: false,
 			// display: 0,
 			element: null,
-			frameRate: 60,
+			frameRate: 120,
 			#if !web fullscreen: false, #end
 			height: 720,
 			hidden: #if munit true #else false #end,
@@ -103,7 +103,7 @@ class ApplicationMain
 		
 		#elseif !air
 		app.window.context.attributes.background = 0;
-		app.window.frameRate = 60;
+		app.window.frameRate = 120;
 		#end
 
 		var preloader = getPreloader();
