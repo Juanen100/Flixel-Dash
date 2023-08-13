@@ -11,12 +11,15 @@ class Player extends FlxSprite
 	public static var playerState:Int = 0;
 	public static var isMini:Bool = false;
 
+	var inverted:Bool = false;
+
 	public function new(x:Float = 0, y:Float = 0)
 	{
 		super(x, y);
 
 		playerState = 0;
 
+		// TODO: Implement custom colors (and icons maybe)
 		// color = FlxColor.WHITE;
 
 		acceleration.y = GRAVITY * 2.2;
@@ -101,16 +104,20 @@ class Player extends FlxSprite
 					angle = 0;
 				}
 			case 4: // Ball
-				loadGraphic(Paths.image("modes/cube")); // I don't have ball yet so yeah
+				loadGraphic(Paths.image("modes/cube"));
 				updateHitbox();
 				acceleration.y = 0;
-				if (FlxG.keys.pressed.SPACE && isTouching(FLOOR) || FlxG.mouse.pressed && isTouching(FLOOR))
-				{
-					velocity.y = GRAVITY;
-				}
-				else if (FlxG.keys.pressed.SPACE && isTouching(CEILING) || FlxG.mouse.pressed && isTouching(CEILING))
+				if (FlxG.keys.pressed.SPACE && !inverted || FlxG.mouse.pressed && !inverted)
 				{
 					velocity.y = -GRAVITY;
+					if (isTouching(CEILING))
+						inverted = true;
+				}
+				else if (FlxG.keys.pressed.SPACE && inverted || FlxG.mouse.pressed && inverted)
+				{
+					velocity.y = GRAVITY;
+					if (isTouching(FLOOR))
+						inverted = false;
 				}
 				angle += 3.25;
 		}
