@@ -21,6 +21,7 @@ class PlayState extends LevelState
 
 	override public function create()
 	{
+		FlxG.mouse.visible = false;
 		Player.isDead = false;
 		FlxG.sound.playMusic(Paths.music(songToPlay));
 		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);
@@ -49,13 +50,6 @@ class PlayState extends LevelState
 
 		createLevel();
 
-		/*portal = new Portals(1920, 445, FlxColor.RED);
-			portal.portalType = 3;
-			// add(portal);
-
-			spike = new Spike(2120, 492, "spike_01");
-			add(spike); */
-
 		super.create();
 	}
 
@@ -76,6 +70,7 @@ class PlayState extends LevelState
 
 		if (FlxG.keys.justPressed.ESCAPE)
 		{
+			FlxG.sound.music.stop();
 			FlxG.switchState(new MainMenu());
 		}
 

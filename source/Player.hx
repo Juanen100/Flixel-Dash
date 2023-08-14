@@ -23,8 +23,10 @@ class Player extends FlxSprite
 
 		playerState = 0;
 
-		// TODO: Implement custom colors (and icons maybe)
-		// color = FlxColor.WHITE;
+		if (FlxG.save.data.playerColor == null)
+			color = FlxColor.WHITE;
+		else
+			color = FlxG.save.data.playerColor;
 
 		acceleration.y = GRAVITY * 2.5;
 	}
@@ -46,7 +48,7 @@ class Player extends FlxSprite
 
 				if (!isTouching(FLOOR))
 				{
-					angle += 3.25;
+					angle += 3.75;
 				}
 				else
 				{
@@ -63,7 +65,7 @@ class Player extends FlxSprite
 
 				if (!isTouching(CEILING))
 				{
-					angle += 3.25;
+					angle += 3.75;
 				}
 				else
 				{

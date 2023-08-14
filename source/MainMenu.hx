@@ -2,6 +2,7 @@ package;
 
 import flixel.FlxG;
 import flixel.FlxSprite;
+import flixel.util.FlxSave;
 
 class MainMenu extends NewFlxState
 {
@@ -17,6 +18,8 @@ class MainMenu extends NewFlxState
 
 	override function create()
 	{
+		FlxG.mouse.visible = true;
+		FlxG.mouse.useSystemCursor = true;
 		FlxG.sound.playMusic(Paths.music("menuLoop"));
 
 		bg = new BG(0, 0, Paths.image("bgs/game_bg_01_001-hd"), 0x287dff, X, 0, 0, false);

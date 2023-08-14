@@ -25,6 +25,13 @@ class LevelSelector extends NewFlxState
 		{
 			FlxG.switchState(new MainMenu());
 		}
+
+		if (FlxG.keys.justPressed.ENTER)
+		{
+			PlayState.songToPlay = "StereoMadness";
+			PlayState.levelToLoad = "Stereo Madness";
+			FlxG.switchState(new PlayState());
+		}
 		super.update(elapsed);
 	}
 }
