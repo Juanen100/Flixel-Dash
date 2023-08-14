@@ -1,0 +1,43 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "assets/data/Stereo Madness/lvl.tmx",
+    "expandedProjectPaths": [
+        "assets",
+        "assets/data",
+        "assets/data/Stereo Madness",
+        "."
+    ],
+    "fileStates": {
+        "assets/data/Stereo Madness/assets.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "assets/data/Stereo Madness/lvl.tmx": {
+            "scale": 0.0625,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 6624,
+                "y": 10456
+            }
+        }
+    },
+    "last.imagePath": "F:/Projects/VSCode Projects/Flixel-Dash/assets/images/spikes",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 635,
+    "map.tileWidth": 635,
+    "openFiles": [
+        "assets/data/Stereo Madness/lvl.tmx",
+        "assets/data/Stereo Madness/assets.tsx"
+    ],
+    "project": "levels.tiled-project",
+    "recentFiles": [
+        "assets/data/Stereo Madness/assets.tsx",
+        "assets/data/Stereo Madness/lvl.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.type": 1
+}

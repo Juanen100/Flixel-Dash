@@ -111,6 +111,8 @@ null
 #if flash
 
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_data_goes_here_txt extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_stereo_madness_assets_tsx extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_stereo_madness_lvl_tmx extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_bgs_game_bg_01_001_hd_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_blocks_groundsquare_01_001_hd_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_images_images_go_here_txt extends null { }
