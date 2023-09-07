@@ -10401,9 +10401,12 @@
    <depend name="include/flixel/addons/editors/tiled/TiledMap.h"/>
    <depend name="include/flixel/addons/editors/tiled/TiledObject.h"/>
    <depend name="include/flixel/addons/editors/tiled/TiledObjectLayer.h"/>
+   <depend name="include/flixel/addons/editors/tiled/TiledPropertySet.h"/>
    <depend name="include/flixel/group/FlxTypedGroup.h"/>
    <depend name="include/flixel/util/IFlxDestroyable.h"/>
+   <depend name="include/haxe/IMap.h"/>
    <depend name="include/haxe/Log.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
   </file>
   <file name="src/LevelSelector.cpp" >
    <depend name="include/BG.h"/>

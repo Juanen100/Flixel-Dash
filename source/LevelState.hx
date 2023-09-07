@@ -15,9 +15,11 @@ class LevelState extends NewFlxState
 		trace(spikeLayers, "trace");
 		for (spike in spikeLayers.objects)
 		{
-			final spikeSpr = new Spike(spike.x, spike.y + 492, "spike_01");
+			final spikeSpr = new Spike(spike.x, spike.y + 492, spike.properties.resolve("spikeType"));
 			spikeSpr.flipY = spike.flippedVertically;
 			spikesGroup.add(spikeSpr);
+
+			trace(spike.y + 492);
 		}
 
 		add(spikesGroup);

@@ -6,9 +6,9 @@
     "activeFile": "assets/data/Stereo Madness/lvl.tmx",
     "expandedProjectPaths": [
         "assets/data",
-        "assets",
         ".",
-        "assets/data/Stereo Madness"
+        "assets/data/Stereo Madness",
+        "assets"
     ],
     "fileStates": {
         "assets/data/Stereo Madness/assets.tsx": {
@@ -17,11 +17,11 @@
             "scaleInEditor": 1
         },
         "assets/data/Stereo Madness/lvl.tmx": {
-            "scale": 0.0625,
+            "scale": 0.75,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 4416,
-                "y": 440
+                "x": 1757.3333333333333,
+                "y": -98
             }
         }
     },
